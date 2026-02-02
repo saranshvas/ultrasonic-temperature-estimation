@@ -26,8 +26,9 @@ The system measures ultrasonic time-of-flight (TOF) with an HC-SR04 sensor and a
 2. Connect HC-SR04:
    - TRIG → PD0
    - ECHO → PD1
-3. Place a flat reflector at 100 cm from the sensor.
-4. Power the system and observe velocity and temperature on the LCD.
+3. Interface the 16×2 LCD to PORTC (default CodeVisionAVR LCD configuration).
+4. Place a flat reflector at 100 cm from the sensor.
+5. Power the system and observe velocity and temperature on the LCD.
 
 
 ## System Architecture and Hardware Components
@@ -47,7 +48,7 @@ The device is built using a compact, embedded setup optimized for high-precision
 | Supporting Hardware | PCB, jumper wires              | Signal conditioning, mechanical integration, and stable interfacing |
 
 
-## Our Method
+## How it works
 
 ### 1. Ultrasonic Pulse Emission and TOF Measurement
 1. The HC-SR04 emits a 10 µs ultrasonic pulse toward a fixed reflector.
@@ -78,7 +79,7 @@ while (ECHO == 1 && count < 60000) {
 ```
 ### 2. Multi-Sample Averaging and Temporal Stabilization
 
-1. To reduce enhance measurement reliability, multi-sample averaging is applied over 200 valid velocity readings.
+1. To enhance measurement reliability, multi-sample averaging is applied over 200 valid velocity readings.
 
 2. Only valid measurements are accumulated to compute the average ultrasonic velocity.
 
@@ -144,20 +145,20 @@ To assess the performance of our ultrasonic temperature measurement device, we c
 
 1.  **High Accuracy:** Our device consistently measures temperature within ±0.4 °C of the NPL standard, demonstrating precise calibration.
 
-2.  **High Stability:** Multi-sample averaging and temporal smoothing ensures repeatable, reliable readings.
+2.  **High Stability:** Multi-sample averaging and temporal smoothing ensure repeatable, reliable readings.
 
 3.  **Overall Performance:** The ideal device combines both high accuracy and stability, providing a trustworthy, contactless, and low-cost temperature measurement solution.
 
 
-## Availabale Methods
+## Available Methods
 
-1. contact_sensors – Thermistors or RTDs; require physical contact, slower response in air.
+1. Contact sensors – Thermistors or RTDs; require physical contact, slower response in air.
 
-2. single_tof_ultrasonic – Existing ultrasonic approaches; rely on single-sample TOF, higher uncertainty.
+2. Single TOF ultrasonic – Existing ultrasonic approaches; rely on single-sample TOF, higher uncertainty.
 
-3. wireless_iot – Distributed monitoring using wireless sensors; needs calibration and network setup.
+3. Wireless/IoT sensors – Distributed monitoring using wireless sensors; needs calibration and network setup.
 
-4. infrared_optical – Non-contact IR/optical sensors; sensitive to emissivity and environmental factors.
+4. Infrared/optical – Non-contact IR/optical sensors; sensitive to emissivity and environmental factors.
 
 
 ## Key Metrics to Compare

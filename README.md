@@ -17,7 +17,8 @@ The system measures ultrasonic time-of-flight (TOF) with an HC-SR04 sensor and a
 
 Publication: In proceedings of International Conference on Ultrasonics and Materials Science for Advanced Technology (ICUMSAT-2025) held on 21-23 Jan 2026, Chennai, India.
 
-Link: https://www.researchgate.net/publication/400065300_Development_of_a_Device_for_Estimation_of_Ambient_Temperature_by_Measuring_Ultrasonic_Propagation_Velocity_in_Air
+## Citation
+If you use this code, data, or methodology in academic or research work, please cite: https://www.researchgate.net/publication/400065300_Development_of_a_Device_for_Estimation_of_Ambient_Temperature_by_Measuring_Ultrasonic_Propagation_Velocity_in_Air
 
 
 🎯 Objectives
